@@ -27,8 +27,8 @@ io.on('connection', (socket) => {
         const { user, isExist } = addUser({name, room});
 
         const userMessage = isExist
-            ? `${user.name}, bazbl netu :-(`
-            : `${user.name}, вы присоеденились к комнате`;
+            ? `${user.name}, базы нету`
+            : `${user.name}, вы присоединились к комнате`;
 
         socket.emit('message', {
             data: {user: {name: 'Сервер'}, message: userMessage },
